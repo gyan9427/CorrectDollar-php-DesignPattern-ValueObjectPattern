@@ -18,4 +18,12 @@ class DollarClassTest extends TestCase
         $this->assertIsFloat($dollar->getAmount());
         $this->assertEquals(0.0,$dollar->getAmount());
     }
+
+    public function testDollarMustHaveAddMethod(){
+        $dollarMock = $this->createMock(Dollar::class);
+        $dollarMock->method('add')
+            ->willReturn(true);
+        
+        $this->assertTrue($dollarMock->add());
+    }
 }
