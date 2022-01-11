@@ -24,7 +24,7 @@ class Dollar {
         return $this->amount;
     }
 
-    public function add(){
-        
+    public function add(Dollar $amount){
+        return new Dollar($this->amount+$amount->getAmount());        
     }
 }
