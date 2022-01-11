@@ -11,4 +11,16 @@ class Dollar {
      */
     private $amount;
 
+    /**
+     * Constructor to assign floating to $amount
+     * 
+     * @param Float $amount
+     */
+    public function __construct(Float $amount=0.0){
+        $this->amount = $amount;
+    }
+
+    public function getAmount(){
+        return $this->amount;
+    }
 }
