@@ -23,4 +23,8 @@ class Dollar {
     public function getAmount(){
         return $this->amount;
     }
+
+    public function add(){
+        
+    }
 }
