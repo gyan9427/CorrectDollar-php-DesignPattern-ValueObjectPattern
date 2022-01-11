@@ -12,4 +12,10 @@ class DollarClassTest extends TestCase
     public function testDollarClassForAmountAttributte(){
         $this->assertObjectHasAttribute("amount",new Dollar);
     }
+
+    public function testAmountHasBeenInitialisedToZeroAmount(){
+        $dollar = new Dollar;
+        $this->assertIsFloat($dollar->getAmount());
+        $this->assertEquals(0.0,$dollar->getAmount());
+    }
 }
