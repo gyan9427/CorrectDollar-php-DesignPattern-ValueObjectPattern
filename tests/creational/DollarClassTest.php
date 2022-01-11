@@ -24,6 +24,14 @@ class DollarClassTest extends TestCase
         $dollarMock->method('add')
             ->willReturn(true);
         
-        $this->assertTrue($dollarMock->add());
+        $this->assertTrue($dollarMock->add(new Dollar(200)));
+    }
+
+    public function testAddMethodMustAddToTheAmountAttribute(){
+        $dollar = new Dollar;
+        $add_dollar = $dollar->add(new Dollar(200));
+        $this->assertEquals(200,$add_dollar->getAmount());
+        $add_dollar = $add_dollar->add(new Dollar(400));
+        $this->assertEquals(600,$add_dollar->getAmount());
     }
 }
