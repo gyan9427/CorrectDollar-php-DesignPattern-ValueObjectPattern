@@ -8,4 +8,8 @@ class DollarClassTest extends TestCase
     public function testPresenceOfDollarClass(){
         $this->assertIsObject(new Dollar);
     }
+
+    public function testDollarClassForAmountAttributte(){
+        $this->assertObjectHasAttribute("amount",new Dollar);
+    }
 }
